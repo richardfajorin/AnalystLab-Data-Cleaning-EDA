@@ -1,6 +1,6 @@
 Data Cleaning & EDA: OnlineRetail & Netflix Datasets
 Author: Richard Obanijesu Fajorin
-Program: AnalystLab Africa — Data Analyst Internship (Week 1–2)
+Program: AnalystLab Africa, Data Analyst Internship (Week 1–2)
 Tools: Python, Pandas, Jupyter Notebook, Matplotlib, Seaborn
 Overview
 End-to-end data cleaning and exploratory data analysis (EDA) on two Kaggle datasets - an e-commerce transaction log (OnlineRetail) and a media catalog (Netflix Titles) - covering missing-value handling, outlier treatment, format standardization, statistical summaries, and visualization.
