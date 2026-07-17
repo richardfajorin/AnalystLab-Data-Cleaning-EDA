@@ -1,0 +1,72 @@
+
+════════════════════════════════════════════════════════════════════════════════
+                    WEEK 1-2: DATA CLEANING & EDA SUMMARY
+                Richard Obanijesu Fajorin | BME/25/8072
+════════════════════════════════════════════════════════════════════════════════
+
+CLEANING CHALLENGES ENCOUNTERED:
+
+OnlineRetail Dataset:
+- Missing CustomerID (135,080 rows) → Dropped (needed for customer analysis)
+- Missing Description (1,454 rows) → Dropped (incomplete product info)
+- Negative unit prices found → Removed (data quality issues, likely refunds)
+- Negative quantities exist → KEPT (legitimate returns)
+- Date format needed standardization (MM/DD/YYYY HH:MM → datetime)
+Result: 541,909 rows cleaned → ~404,000+ usable rows
+
+Netflix Dataset:
+- Missing director (~29%) → Kept (some titles don't have directors)
+- Missing cast (~9%) → Kept (legitimate)
+- Missing country (~1%) → Filled with 'Unknown'
+- Missing rating → Filled with 'Not Rated'
+- Missing date_added (~10%) → Kept (older content pre-dates this field)
+- Duration format mixed ("90 min" vs "2 Seasons") → Parsed into numbers
+Result: 8,809 rows fully processed, no rows deleted
+
+
+KEY EDA FINDINGS:
+
+OnlineRetail:
+✓ UK dominates with 50%+ of total revenue; international market underdeveloped
+✓ Top 10 products generate significant revenue; product concentration risk exists
+✓ Consistent month-over-month growth with Q4 peak (holiday seasonality pattern)
+✓ Bulk orders detected (80K+ units per transaction) → B2B segment identified
+✓ Low return rate (~3-5%) indicates good product quality
+✓ Customer concentration: Top 10 customers generate ~15% of total revenue
+
+Netflix:
+✓ TV Shows (60%) outnumber Movies (40%); strategy favors subscriber retention
+✓ Content additions peaked in 2021; declining 2022+ (cost management likely)
+✓ USA leads production (35%); India, South Korea emerging as content hubs
+✓ Adult content dominates (TV-MA/R = 50%+); family content gap (15%)
+✓ Dramas, International TV, Documentaries top genres (substance-focused audience)
+✓ Global sourcing strategy evident: localized content for each major market
+
+
+TOP 3 RECOMMENDATIONS:
+
+OnlineRetail:
+1. Expand top 10 bestselling products into Netherlands, Sweden, Germany
+   (proven demand exists; high-potential markets)
+2. Create dedicated B2B sales team with tiered pricing
+   (bulk orders show corporate demand; separate strategy needed)
+3. Plan Q4 inventory surge; run promotional campaigns Jan-Feb
+   (seasonality clear; optimize stock for peak periods)
+
+Netflix:
+1. Increase family-friendly content from 15% to 25% of library
+   (tap underserved family/kids market for subscriber growth)
+2. Double down on international drama production
+   (proven viewership; competitive advantage vs other streamers)
+3. Monitor content acquisition costs; evaluate ROI of new productions
+   (2022+ decline suggests strategic shift; ensure quality over quantity)
+
+
+════════════════════════════════════════════════════════════════════════════════
+DELIVERABLES COMPLETED:
+✓ OnlineRetail_CLEANED.csv (405K+ clean rows)
+✓ Netflix_CLEANED.csv (8,809 clean rows)
+✓ OnlineRetail_EDA.png (4 visualizations)
+✓ Netflix_EDA.png (4 visualizations)
+✓ This Jupyter Notebook (all analysis documented)
+════════════════════════════════════════════════════════════════════════════════
